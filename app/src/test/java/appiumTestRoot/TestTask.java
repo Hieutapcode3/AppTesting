@@ -15,7 +15,7 @@ public class TestTask {
     public void runLoginTesting() {
         try {
             LoginTesting loginTesting = new LoginTesting(driver);
-            loginTesting.clickImageView();
+            loginTesting.runLoginTests();
             System.out.println("Click ImageView test completed.");
         } catch (Exception e) {
             System.err.println("Error during LoginTesting: " + e.getMessage());

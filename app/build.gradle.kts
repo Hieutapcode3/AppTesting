@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.appiumtestproject"
+    namespace = "com.example.youtubetesting"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.appiumtestproject"
+        applicationId = "com.example.youtubetesting"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

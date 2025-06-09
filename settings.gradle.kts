@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AppiumTestProject"
+rootProject.name = "YoutubeTesting"
 include(":app")
  
