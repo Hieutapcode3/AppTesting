@@ -1,6 +1,6 @@
 package appiumTestRoot;
 
-import appiumTestRoot.Task.LoginTesting;
+import appiumTestRoot.TestTask;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.testng.annotations.AfterClass;
@@ -20,21 +20,21 @@ public class Main {
                 .setPlatformName("Android")
                 .setDeviceName("Pixel_9")
                 .setPlatformVersion("16")
-                .setAppPackage("com.google.android.youtube")
-                .setAppActivity("com.google.android.youtube.app.honeycomb.Shell$HomeActivity")
+                .setAppPackage("com.example.moviego")
+                .setAppActivity("com.example.moviego.MainActivity")
                 .setAutomationName("UiAutomator2")
                 .setAutoGrantPermissions(true)
                 .setNoReset(true)
                 .setNewCommandTimeout(Duration.ofSeconds(60));
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-        System.out.println("YouTube app opened successfully.");
+        System.out.println("MovieGo app opened successfully.");
     }
 
     @Test
-    public void openYouTubeApp() throws InterruptedException {
+    public void openMovieGoApp() throws InterruptedException {
         TestTask testTask = new TestTask(driver);
-        testTask.runLoginTesting();
+        testTask.runTestTask();
     }
 
     @AfterClass
