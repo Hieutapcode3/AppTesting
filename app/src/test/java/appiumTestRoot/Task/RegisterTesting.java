@@ -22,7 +22,7 @@ public class RegisterTesting extends BaseTest {
             gotoRegisterPage();
             testRegisterWrongFormat("tester", "testuser", "password123");
             testRegisterFailed("existinguser@example.com", "existinguser", "11111");
-//            testRegisterSuccess("hieupham9155@gmail.com", "hieuthu3", "123456");
+            testRegisterSuccess("hieupham9155@gmail.com", "hieuthu3", "123456");
         } catch (Exception e) {
             System.err.println("Error during register tests: " + e.getMessage());
         }

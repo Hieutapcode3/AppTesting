@@ -6,6 +6,8 @@ import appiumTestRoot.Task.LoginTesting;
 import appiumTestRoot.Task.LogoutTesting;
 import appiumTestRoot.Task.MovieListTesting;
 import appiumTestRoot.Task.RegisterTesting;
+import appiumTestRoot.Task.SearchingTesting;
+import appiumTestRoot.Task.WatchTrailerTesting;
 import io.appium.java_client.android.AndroidDriver;
 
 
@@ -30,6 +32,14 @@ public class TestTask {
             MovieListTesting showMovieListTesting = new MovieListTesting((driver));
             showMovieListTesting.runMovieListTest();
             System.out.println("Show Movie Test Successful");
+
+            SearchingTesting searchTesting = new SearchingTesting(driver);
+            searchTesting.runSearchTest();
+            System.out.println("Search Movie Test Successful");
+
+            WatchTrailerTesting watchTrailerTesting = new WatchTrailerTesting(driver);
+            watchTrailerTesting.runWatchTrailerTest();
+            System.out.println("Watch Trailer Test Successful");
 
 //            EditUserNameTesting editNameTesting = new EditUserNameTesting(driver);
 //            editNameTesting.runEditUserNameTest();

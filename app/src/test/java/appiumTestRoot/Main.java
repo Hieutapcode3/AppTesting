@@ -32,7 +32,7 @@ public class Main {
     }
 
     @Test
-    public void openMovieGoApp() throws InterruptedException {
+    public void testMovieGoApp() throws InterruptedException {
         TestTask testTask = new TestTask(driver);
         testTask.runTestTask();
     }
