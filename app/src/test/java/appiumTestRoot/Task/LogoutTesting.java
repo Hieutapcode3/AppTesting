@@ -23,18 +23,6 @@ public class LogoutTesting extends BaseTest {
             System.err.println("Error during logout tests: " + e.getMessage());
         }
     }
-    public void openProfileTab() {
-        try {
-            Thread.sleep(2000);
-            WebElement profileTab = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//android.widget.ImageView[@content-desc='Profile\nTab 4 of 4']")));
-            profileTab.click();
-            System.out.println("Clicked 'Profile' tab successfully.");
-        } catch (Exception e) {
-            System.err.println("Failed to click 'Profile' tab: " + e.getMessage());
-        }
-    }
-
     public void clickLogoutButton() {
         try {
             Thread.sleep(2000);

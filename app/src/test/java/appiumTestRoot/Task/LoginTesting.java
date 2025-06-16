@@ -18,7 +18,7 @@ public class LoginTesting extends BaseTest {
             clickLoginButton();
             testLoginWrongFormat("tester", "password123");
             testLoginFailed("testuser@example.com", "password123");
-            testLoginSuccess("kimochi9155@gmail.com", "111111");
+            testLoginSuccess("kimochi9155@gmail.com", "000000");
         } catch (Exception e) {
             System.err.println("Error during login tests: " + e.getMessage());
         }
