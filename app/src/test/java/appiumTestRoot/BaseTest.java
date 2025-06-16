@@ -24,10 +24,10 @@ public class BaseTest {
     public void openHomePage() {
         try {
             Thread.sleep(3000);
-            WebElement menuButton = wait.until(ExpectedConditions.elementToBeClickable(
+            WebElement homeButton = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//android.widget.ImageView[@content-desc=\"Home\n" +
                             "Tab 1 of 4\"]")));
-            menuButton.click();
+            homeButton.click();
             System.out.println("Clicked 'Home' button successfully.");
             scrollUp();
         } catch (Exception e) {
