@@ -20,8 +20,10 @@ public class WatchTrailerTesting extends BaseTest {
             clickMovieItem();
             clickTrailerButton();
             waitForWebViewAndPlay();
-            Thread.sleep(10000);
+            Thread.sleep(15000);
             closeTrailer();
+            clickBackBtn();
+            openHomePage();
         } catch (Exception e) {
             System.err.println("Watch trailer test failed: " + e.getMessage());
         }
@@ -43,7 +45,11 @@ public class WatchTrailerTesting extends BaseTest {
         try {
             Thread.sleep(3000);
             WebElement movie = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//android.view.View[@content-desc=\"Predator: Killer of Killers\n8.0\n(491)\n1 hour 25 minutes\nAnimation, Action, Science Fiction\"]")
+                    By.xpath("//android.view.View[@content-desc=\"Final Destination Bloodlines\n" +
+                            "7.1\n" +
+                            "(748)\n" +
+                            "1 hour 49 minutes\n" +
+                            "Horror, Mystery\"]")
             ));
             movie.click();
             System.out.println("Clicked movie item.");
@@ -70,7 +76,7 @@ public class WatchTrailerTesting extends BaseTest {
             WebElement webView = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.className("android.webkit.WebView")
             ));
-            Thread.sleep(15000);
+            Thread.sleep(10000);
             webView.click();
             System.out.println("Clicked WebView to play trailer.");
         } catch (Exception e) {
@@ -98,6 +104,17 @@ public class WatchTrailerTesting extends BaseTest {
             System.out.println("Clicked 'NowPlaying' tab.");
         } catch (Exception e) {
             System.err.println("Failed to click 'Coming Soon' tab: " + e.getMessage());
+        }
+    }
+    private void clickBackBtn() {
+        try {
+            Thread.sleep(2000);
+            WebElement backBtn = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button")));
+            backBtn.click();
+            System.out.println("Clicked back Btn field.");
+        } catch (Exception e) {
+            System.err.println("Failed to click back Btn field: " + e.getMessage());
         }
     }
 }

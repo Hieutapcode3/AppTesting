@@ -1,10 +1,12 @@
 package appiumTestRoot;
 
 import appiumTestRoot.Task.ChangePassTesting;
+import appiumTestRoot.Task.CheckTicketTesting;
 import appiumTestRoot.Task.EditUserNameTesting;
 import appiumTestRoot.Task.LoginTesting;
 import appiumTestRoot.Task.LogoutTesting;
 import appiumTestRoot.Task.MovieListTesting;
+import appiumTestRoot.Task.OrderTicketTesting;
 import appiumTestRoot.Task.RegisterTesting;
 import appiumTestRoot.Task.SearchingTesting;
 import appiumTestRoot.Task.WatchTrailerTesting;
@@ -29,17 +31,26 @@ public class TestTask {
 //            loginTesting.runLoginTests();
 //            System.out.println("Login Test Successful");
 
-            MovieListTesting showMovieListTesting = new MovieListTesting((driver));
-            showMovieListTesting.runMovieListTest();
-            System.out.println("Show Movie Test Successful");
+//            MovieListTesting showMovieListTesting = new MovieListTesting((driver));
+//            showMovieListTesting.runMovieListTest();
+//            System.out.println("Show Movie Test Successful");
+//
+//            SearchingTesting searchTesting = new SearchingTesting(driver);
+//            searchTesting.runSearchTest();
+//            System.out.println("Search Movie Test Successful");
+//
+//            WatchTrailerTesting watchTrailerTesting = new WatchTrailerTesting(driver);
+//            watchTrailerTesting.runWatchTrailerTest();
+//            System.out.println("Watch Trailer Test Successful");
 
-            SearchingTesting searchTesting = new SearchingTesting(driver);
-            searchTesting.runSearchTest();
-            System.out.println("Search Movie Test Successful");
+//            OrderTicketTesting orderTicketTesting = new OrderTicketTesting(driver);
+//            orderTicketTesting.runOrderTicketTest();
+//            System.out.println("Order Ticket Test Successful");
 
-            WatchTrailerTesting watchTrailerTesting = new WatchTrailerTesting(driver);
-            watchTrailerTesting.runWatchTrailerTest();
-            System.out.println("Watch Trailer Test Successful");
+            CheckTicketTesting checkTicket = new CheckTicketTesting(driver);
+            checkTicket.runCheckTicketTest();
+            System.out.println("Check Ticket Test Successful");
+
 
 //            EditUserNameTesting editNameTesting = new EditUserNameTesting(driver);
 //            editNameTesting.runEditUserNameTest();

@@ -47,7 +47,7 @@ public class BaseTest {
     }
     public void scrollDown() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(4000);
             int width = driver.manage().window().getSize().width;
             int height = driver.manage().window().getSize().height;
             int startX = width / 2;
@@ -72,7 +72,7 @@ public class BaseTest {
 
     public void scrollUp(float startRatio, float endRatio) {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(4000);
             int width = driver.manage().window().getSize().width;
             int height = driver.manage().window().getSize().height;
             int startX = width / 2;

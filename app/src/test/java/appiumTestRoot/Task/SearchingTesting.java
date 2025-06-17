@@ -15,7 +15,7 @@ public class SearchingTesting extends BaseTest {
     public void runSearchTest() {
         try {
             openHomePage();
-            scrollUp(0.2f,0.8f);
+            scrollUp(0.3f,0.6f);
             Thread.sleep(5000);
             clickSearchField();
             enterSearchKeyword("mission");
